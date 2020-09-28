@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -20,12 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+  <meta name="description" content="Run">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jarrett&#39;s Blog">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:site_name" content="Jarrett&#39;s Blog">
+<meta property="og:description" content="Run">
+<meta property="og:locale">
+<meta property="article:author" content="Jarrett Luo">
+<meta property="article:tag" content="Jarrett Luo">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/">
@@ -37,11 +40,11 @@
     sidebar: "",
     isHome : true,
     isPost : false,
-    lang   : 'en'
+    lang   : 'zh-Hans'
   };
 </script>
 
-  <title>Hexo</title>
+  <title>Jarrett's Blog</title>
   
 
 
@@ -81,7 +84,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -92,9 +95,10 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">Jarrett's Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">Keep running.</p>
   </div>
 
   <div class="site-nav-right">
@@ -115,7 +119,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
 
   </li>
   </ul>
@@ -144,22 +148,22 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/28/test-my-site/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="Jarrett Luo">
+      <meta itemprop="description" content="Run">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jarrett's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/09/28/test-my-site/" class="post-title-link" itemprop="url">test_my_site</a>
+            <a href="/2020/09/28/test-my-site/" class="post-title-link" itemprop="url">软件许可证文件生成软件</a>
         </h2>
 
         <div class="post-meta">
@@ -167,9 +171,10 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">نُشر في</span>
+              
 
-              <time title="Created: 2020-09-28 11:30:12" itemprop="dateCreated datePublished" datetime="2020-09-28T11:30:12+08:00">2020-09-28</time>
+              <time title="أُنشأ: 2020-09-28 11:30:12 / عُدل: 13:11:25" itemprop="dateCreated datePublished" datetime="2020-09-28T11:30:12+08:00">2020-09-28</time>
             </span>
 
           
@@ -183,7 +188,51 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h1 id="软件许可证文件生成软件"><a href="#软件许可证文件生成软件" class="headerlink" title="软件许可证文件生成软件"></a>软件许可证文件生成软件</h1><blockquote>
+<p>在写好软件以后，往往需要将软件打包发送给用户进行使用。但是若只希望给特定的用户进行使用，那么就需要将软件设置License（许可证）。本篇文章就来提供一种生成license文件的思路。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/20506226-1961496363f45cd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="激活码生成器"></p>
+<h2 id="1、前言"><a href="#1、前言" class="headerlink" title="1、前言"></a>1、前言</h2><p> 软件开发商完成一个软件的模块，希望交付给用户进行使用。软件开发商一般是希望只授权给某些用户使用，而不希望软件被其他未授权用户进行使用。因此需要开发一个软件授权的机制。<br>当用户安装或者第一次使用软件的时候，软件是没有被授权的。当用户希望将软件绑定到某一台特定的计算机进行使用时，需要将目标计算机的MAC地址告知软件开发商，收到开发商的授权以后就能正常使用软件了。<br>软件开发商收到授权请求时，获得软件安装的目标计算机的MAC地址。通过一套绑定mac地址的算法，生成了一个license，并且具有license失效的时间。生成的license同软件中内置的同一套算法生成的信息进行比对，如果比对上，那么授权成功。如果比对不上或者授权过期，那么授权失败。</p>
+<h2 id="2、软件License的实现办法"><a href="#2、软件License的实现办法" class="headerlink" title="2、软件License的实现办法"></a>2、软件License的实现办法</h2><p>[暂无]</p>
+<h2 id="3、使用PyQt5开发"><a href="#3、使用PyQt5开发" class="headerlink" title="3、使用PyQt5开发"></a>3、使用PyQt5开发</h2><h3 id="3-1-框架"><a href="#3-1-框架" class="headerlink" title="3.1 框架"></a>3.1 框架</h3><p>1、获取目标计算机的mac地址<br>2、设置license过期的时间<br>3、对mac和授权时间进行加密</p>
+<h3 id="3-2-算法"><a href="#3-2-算法" class="headerlink" title="3.2 算法"></a>3.2 算法</h3><p>算法的核心就是，对mac地址进行hash计算。为了增加生成的license文件的困难度，在mac地址之前再加上一个特定的字符，让该license生成软件的破解难度可以稍微提高。例如在这里的示例代码中，特定字符暂定为<code>first_key</code>。</p>
+<blockquote>
+<p>Hash算法的特点是，HASH的设计以无法解为目的；简单说来就是正向简单，逆向困难。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#1、得到密钥，通过hash算法计算目标计算机的mac地址</span><br><span class="line">        psw &#x3D; hash_msg(&#39;first_key&#39; + str(self.mac_addr))</span><br><span class="line">#2、新建一个license_str 的字典，用于保存真实的mac地址，license失效时间，加密后的字符串</span><br><span class="line">        license_str &#x3D; &#123;&#125;</span><br><span class="line">        license_str[&#39;mac&#39;] &#x3D; self.mac_addr</span><br><span class="line">        license_str[&#39;time_str&#39;] &#x3D; self.active_date</span><br><span class="line">        license_str[&#39;psw&#39;] &#x3D; psw</span><br></pre></td></tr></table></figure>
+
+<p>生成的lincense_str作为一个字典，写入license文件中，是可以很直接地看出其组成。<br>因此为了更进一步加密，保证写入license文件中地信息是无序且无意义地字符串，采用AEScoder进行加密</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from AEScoder import PrpCrypt</span><br><span class="line">pc &#x3D; PrpCrypt(&#39;keyskeyskeyskeys&#39;)  # 初始化密钥</span><br><span class="line">s_encrypt &#x3D; pc.encrypt(str(license_str()))   # &lt;class &#39;bytes&#39;&gt;</span><br></pre></td></tr></table></figure>
+<p>AES只有一个密钥，这个密钥既用来加密，也用于解密。例如在上面地示例代码中，采用了<code>keyskeyskeyskeys</code>作为密钥。该密钥在license生成软件中作为加密密钥，同时在使用license地软件中作为解密密钥。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from AEScoder import PrpCrypt</span><br><span class="line">pc &#x3D; PrpCrypt(&#39;keyskeyskeyskeys&#39;)  # 初始化密钥</span><br><span class="line">d &#x3D; pc.decrypt(s_encrypt)  # 解密</span><br></pre></td></tr></table></figure>
+<p>将生成的license文件保存到特定的文件中，即完成了license的生成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># file_path即保存的文件路径</span><br><span class="line"># mac_str 是目标计算机的mac地址字符串</span><br><span class="line"># time_str 是授权目标计算机的使用时间，可以认为是license文件的失效时间</span><br><span class="line">        file_path &#x3D; self.file_path + &#39;&#x2F;license_&#39;+ mac_str + &#39;_&#39; + time_str + &#39;.lic&#39;</span><br><span class="line">        s_encrypt &#x3D; str(s_encrypt, encoding &#x3D; &quot;utf-8&quot;)   #  bytes to str</span><br><span class="line">        with open(file_path, &#39;w&#39;, encoding&#x3D;&#39;utf-8&#39;) as lic:</span><br><span class="line">            lic.write(str(s_encrypt))</span><br><span class="line">            lic.close()</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-代码实现"><a href="#3-3-代码实现" class="headerlink" title="3.3 代码实现"></a>3.3 代码实现</h3><h3 id="利用Hash算法对一段字符进行运算"><a href="#利用Hash算法对一段字符进行运算" class="headerlink" title="利用Hash算法对一段字符进行运算"></a>利用Hash算法对一段字符进行运算</h3><p>python中实现对一段字符的运算时比较简单的，如下提供了一个示例代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import hashlib</span><br><span class="line">def hash_msg(msg):</span><br><span class="line">    sha256 &#x3D; hashlib.sha256()</span><br><span class="line">    sha256.update(msg.encode(&#39;utf-8&#39;))</span><br><span class="line">    res &#x3D; sha256.hexdigest()</span><br><span class="line">    return res</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取本机的mac地址"><a href="#获取本机的mac地址" class="headerlink" title="获取本机的mac地址"></a>获取本机的mac地址</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def get_mac_address():</span><br><span class="line">    mac &#x3D; uuid.UUID(int &#x3D; uuid.getnode()).hex[-12:]</span><br><span class="line">    return &quot;:&quot;.join([mac[e:e+2] for e in range(0,11,2)])</span><br></pre></td></tr></table></figure>
+
+<h3 id="pyqt5实现界面"><a href="#pyqt5实现界面" class="headerlink" title="pyqt5实现界面"></a>pyqt5实现界面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class MainWindow(QMainWindow):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        QMainWindow.__init__(self)</span><br><span class="line">        loadUi(&quot;Generator.ui&quot;, self)</span><br><span class="line">        self.resize(405,480)</span><br><span class="line">        self.setMinimumSize(QtCore.QSize(415,490))</span><br><span class="line">        self.setMaximumSize(QtCore.QSize(415,490))</span><br><span class="line">        self.setWindowTitle(&#39;******软件激活码生成器&#39;)</span><br><span class="line">        self.setWindowIcon(QIcon(&#39;admin.ico&#39;))</span><br><span class="line">if __name__ &#x3D;&#x3D; &quot;__main__&quot;:</span><br><span class="line">    app &#x3D; QApplication(sys.argv)</span><br><span class="line">    window &#x3D; MainWindow()</span><br><span class="line">    window.show()</span><br><span class="line">    sys.exit(app.exec_())</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成的license文件的字符串"><a href="#生成的license文件的字符串" class="headerlink" title="生成的license文件的字符串"></a>生成的license文件的字符串</h3><p><img src="https://upload-images.jianshu.io/upload_images/20506226-f927fcd4cdeb6f88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="licensence文件"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">665dbda2a88fc8694d0df10e120236fd481087bd3e4d02c86f36ecba5d10eec24f5f0f5c8afb24cd8ee10c72df3c1d567a796c03a5095be96fdd1438e8121f0d780e6fc00784a1be9788661a7b18ed6e73e2ec337b251ede0f0be8f7287e63f0c69f202550dd45db55b62da9c886ba9da25165a6dd253ea9efe5a29e9637941c0d0a0b1cc1c6f01225e6f61eaf520f24</span><br></pre></td></tr></table></figure>
+<p>如果您感兴趣，可以通过以上算法生成激活码。</p>
+<h2 id="4、程序打包"><a href="#4、程序打包" class="headerlink" title="4、程序打包"></a>4、程序打包</h2><p>使用PyInstaller将license文件生成软件进行打包<br>一般常规的打包代码是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m PyInstaller -F license_generator.py</span><br></pre></td></tr></table></figure>
+<p>如果想要给软件增加一个好看的图标，可以在打包的代码中加上打包图标的参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m PyInstaller -F license_generator.py -i icon.ico</span><br></pre></td></tr></table></figure>
+
+<p>在使用pyinstaller模块对pyqt5的程序进行打包的时候往往需要增加几行代码，用于指定其路径。</p>
+<pre><code>def app_path():
+    &quot;&quot;&quot;Returns the base application path.&quot;&quot;&quot;
+    if hasattr(sys, &#39;frozen&#39;):
+        # Handles PyInstaller
+        return os.path.dirname(sys.executable) # 使用pyinstaller打包后的exe目录
+    return os.path.dirname(__file__) # 没打包前的py目录
+
+PROJECT_PATH = app_path()</code></pre>
+<h2 id="5、结尾"><a href="#5、结尾" class="headerlink" title="5、结尾"></a>5、结尾</h2><p>1、该方法仅提供一种思路，即对mac地址和实效时间进行加密，生成字符。<br>2、如果需要提供源代码进行调试，或者代为开发请联系。</p>
+
       
     </div>
 
@@ -201,17 +250,17 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/28/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="Jarrett Luo">
+      <meta itemprop="description" content="Run">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jarrett's Blog">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -224,9 +273,9 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">نُشر في</span>
 
-              <time title="Created: 2020-09-28 10:40:11" itemprop="dateCreated datePublished" datetime="2020-09-28T10:40:11+08:00">2020-09-28</time>
+              <time title="أُنشأ: 2020-09-28 10:40:11" itemprop="dateCreated datePublished" datetime="2020-09-28T10:40:11+08:00">2020-09-28</time>
             </span>
 
           
@@ -312,10 +361,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          المحتويات
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          عام
         </li>
       </ul>
 
@@ -326,8 +375,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
+  <p class="site-author-name" itemprop="name">Jarrett Luo</p>
+  <div class="site-description" itemprop="description">Run</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -335,7 +384,7 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">المقالات</span>
         </a>
       </div>
   </nav>
@@ -366,9 +415,9 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Jarrett Luo</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
   </div>
 
         
