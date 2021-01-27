@@ -164,6 +164,80 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/27/Java%E5%BC%80%E5%8F%91%E6%A1%88%E4%BE%8B%EF%BC%9A%E7%94%B5%E8%84%91%E8%87%AA%E5%8A%A8%E5%BC%80%E5%85%B3%E6%9C%BA%E5%92%8C%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Jarrett Luo">
+      <meta itemprop="description" content="Jarrett's Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jarrett's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/27/Java%E5%BC%80%E5%8F%91%E6%A1%88%E4%BE%8B%EF%BC%9A%E7%94%B5%E8%84%91%E8%87%AA%E5%8A%A8%E5%BC%80%E5%85%B3%E6%9C%BA%E5%92%8C%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5/" class="post-title-link" itemprop="url">Java开发案例：电脑自动开关机和爬取网页</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-01-27 22:45:57 / Modified: 22:47:17" itemprop="dateCreated datePublished" datetime="2021-01-27T22:45:57+08:00">2021-01-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>author: 罗佳瑞<br>初稿时间： 2021年1月27日</p>
+<h4 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h4><p> 以下案例来自于开课吧公开课教程，以下代码用于记录和参考，无其他意图。</p>
+<h3 id="demo1-电脑自动关机，和取消自动关机"><a href="#demo1-电脑自动关机，和取消自动关机" class="headerlink" title="demo1: 电脑自动关机，和取消自动关机"></a>demo1: 电脑自动关机，和取消自动关机</h3><blockquote>
+<p>要求是使用代码对电脑进行控制，能够实现电脑开机和关机的操作。</p>
+</blockquote>
+<p>实现代码如下，分别能够进行自动关机和取消自动关机。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kkb.demo;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">           <span class="comment">// 自动关机的程序，倒计时3600秒</span></span><br><span class="line">          Runtime.getRuntime().exec(<span class="string">&quot;shutdown -s -t 3600&quot;</span>);</span><br><span class="line">          <span class="comment">// 取消自动关机</span></span><br><span class="line">          Runtime.getRuntime().exec(<span class="string">&quot;shutdown -a&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="demo2：-读取网址的内容"><a href="#demo2：-读取网址的内容" class="headerlink" title="demo2： 读取网址的内容"></a>demo2： 读取网址的内容</h3><blockquote>
+<p>该功能是采用Java的内置库实现对网页的访问。使用内置库<code>URL</code>连接网页，并逐行读取网页的内容。</p>
+</blockquote>
+<p>该demo能够拓展为爬虫功能。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kkb.demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.net.URL;</span><br><span class="line"><span class="keyword">import</span> java.net.URLConnection;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 先创建一个网址工具URL的对象，ul</span></span><br><span class="line">        URL ul = <span class="keyword">new</span> URL(<span class="string">&quot;http://www.baidu.com&quot;</span>);</span><br><span class="line">        <span class="comment">// 通过工具url， 连接网络，并得到连接工具conn</span></span><br><span class="line">        URLConnection conn = ul.openConnection();</span><br><span class="line">        <span class="comment">// 获取到用于加载资源的 输入流</span></span><br><span class="line">        InputStream is = conn.getInputStream();</span><br><span class="line">        <span class="comment">// 将输入is，装饰为能读取文字，且可以一次读取一行的缓存字符串</span></span><br><span class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader(</span><br><span class="line">                <span class="keyword">new</span> InputStreamReader(is)</span><br><span class="line">        );</span><br><span class="line">        <span class="comment">// 读取一行资源</span></span><br><span class="line">        String text = br.readLine();</span><br><span class="line">        <span class="comment">// 显示资源</span></span><br><span class="line">        System.out.println(text);</span><br><span class="line">        <span class="comment">// 关闭</span></span><br><span class="line">        br.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>更多代码请访问作者博客：<a target="_blank" rel="noopener" href="http://jiaruiblog.com/">http://jiaruiblog.com</a></p>
+<p>欢迎点赞、转发、分享~</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/18/python%E5%AE%9E%E7%8E%B0%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5%E5%88%B0%E9%82%AE%E7%AE%B1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -470,7 +544,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -483,7 +557,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -518,7 +592,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

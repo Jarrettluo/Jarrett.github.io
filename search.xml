@@ -152,4 +152,28 @@ PROJECT_PATH = app_path()</code></pre>
         <tag>python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Java开发案例：电脑自动开关机和爬取网页</title>
+    <url>/2021/01/27/Java%E5%BC%80%E5%8F%91%E6%A1%88%E4%BE%8B%EF%BC%9A%E7%94%B5%E8%84%91%E8%87%AA%E5%8A%A8%E5%BC%80%E5%85%B3%E6%9C%BA%E5%92%8C%E7%88%AC%E5%8F%96%E7%BD%91%E9%A1%B5/</url>
+    <content><![CDATA[<p>author: 罗佳瑞<br>初稿时间： 2021年1月27日</p>
+<h4 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h4><p> 以下案例来自于开课吧公开课教程，以下代码用于记录和参考，无其他意图。</p>
+<h3 id="demo1-电脑自动关机，和取消自动关机"><a href="#demo1-电脑自动关机，和取消自动关机" class="headerlink" title="demo1: 电脑自动关机，和取消自动关机"></a>demo1: 电脑自动关机，和取消自动关机</h3><blockquote>
+<p>要求是使用代码对电脑进行控制，能够实现电脑开机和关机的操作。</p>
+</blockquote>
+<p>实现代码如下，分别能够进行自动关机和取消自动关机。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kkb.demo;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">           <span class="comment">// 自动关机的程序，倒计时3600秒</span></span><br><span class="line">          Runtime.getRuntime().exec(<span class="string">&quot;shutdown -s -t 3600&quot;</span>);</span><br><span class="line">          <span class="comment">// 取消自动关机</span></span><br><span class="line">          Runtime.getRuntime().exec(<span class="string">&quot;shutdown -a&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="demo2：-读取网址的内容"><a href="#demo2：-读取网址的内容" class="headerlink" title="demo2： 读取网址的内容"></a>demo2： 读取网址的内容</h3><blockquote>
+<p>该功能是采用Java的内置库实现对网页的访问。使用内置库<code>URL</code>连接网页，并逐行读取网页的内容。</p>
+</blockquote>
+<p>该demo能够拓展为爬虫功能。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.kkb.demo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.net.URL;</span><br><span class="line"><span class="keyword">import</span> java.net.URLConnection;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 先创建一个网址工具URL的对象，ul</span></span><br><span class="line">        URL ul = <span class="keyword">new</span> URL(<span class="string">&quot;http://www.baidu.com&quot;</span>);</span><br><span class="line">        <span class="comment">// 通过工具url， 连接网络，并得到连接工具conn</span></span><br><span class="line">        URLConnection conn = ul.openConnection();</span><br><span class="line">        <span class="comment">// 获取到用于加载资源的 输入流</span></span><br><span class="line">        InputStream is = conn.getInputStream();</span><br><span class="line">        <span class="comment">// 将输入is，装饰为能读取文字，且可以一次读取一行的缓存字符串</span></span><br><span class="line">        BufferedReader br = <span class="keyword">new</span> BufferedReader(</span><br><span class="line">                <span class="keyword">new</span> InputStreamReader(is)</span><br><span class="line">        );</span><br><span class="line">        <span class="comment">// 读取一行资源</span></span><br><span class="line">        String text = br.readLine();</span><br><span class="line">        <span class="comment">// 显示资源</span></span><br><span class="line">        System.out.println(text);</span><br><span class="line">        <span class="comment">// 关闭</span></span><br><span class="line">        br.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>更多代码请访问作者博客：<a href="http://jiaruiblog.com/">http://jiaruiblog.com</a></p>
+<p>欢迎点赞、转发、分享~</p>
+]]></content>
+      <tags>
+        <tag>Java, 爬虫</tag>
+      </tags>
+  </entry>
 </search>
