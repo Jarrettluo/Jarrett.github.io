@@ -173,7 +173,29 @@ PROJECT_PATH = app_path()</code></pre>
 <p>欢迎点赞、转发、分享~</p>
 ]]></content>
       <tags>
-        <tag>Java, 爬虫</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Maven 基础概念及应用方法</title>
+    <url>/2021/03/15/Maven-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%8F%8A%E5%BA%94%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h4 id="Maven基础概念"><a href="#Maven基础概念" class="headerlink" title="Maven基础概念"></a>Maven基础概念</h4><p>Project:任何你想构建的事务Maven都可以认为它们是工程，这些工程被定义为工程对象模型（project Object Model POM） 一个工程可以依赖其他的工程，一个工程也可以由多个子工程构成</p>
+<p>POM：POM(pom.xml) 是Maven 的核心文件，它是只是Maven如何工作的元数据文件。POM文件位于每个工程的根目录中。<br>GroupId:GroupId是一个工程在全局中的唯一标识符，一般地，他就是工程名，GroupId有利于使用一个完全的包名将一个工程从其他有类似名称的工程中区别出来。</p>
+<p>Artifact:中文名为”构件”,是工程将要生产或需要使用的文件，它可以是.jar文件,源文件，二进制文件，.war文件，甚至是.pom文件。每个Artifact都要放在仓库（Repository）中，否则Maven无法找到它们。</p>
+<p>Dependency：为了能够构建或运行,一个典型的Java工程都会依赖其他的包，在Maven中,这些被依赖的包就被称为Dependency。Dependency一般是其他工程的Artifact。</p>
+<p>Plug-in: 可以说Maven就是一堆插件的集合，它的每一个功能都是由插件完成的，插件提供goal(类似于Ant中的target),并根据在POM中找到的元数据去完成工作。主要的Maven插件是由Java编写而成的，同时支持用beanshell或Ant脚本编写的插件。</p>
+<p>Repository:仓库，即放置Artifact的地方，有中央仓库，公共仓库，私有仓库及本地仓库之分。为了提高Artifact的下载速度，一般情况下，公司或开发者组织都需要部署一个私有仓库，可以使用Nexus创建Maven私有仓库。</p>
+<h4 id="如何应用"><a href="#如何应用" class="headerlink" title="如何应用"></a>如何应用</h4><p>在IDEA中设置maven，特别注意Maven的安装地址。<br>根据个人的设置不同选择相应的Setting文件和仓库地址<br><img src="images/source/Snipaste_2021-03-15_23-43-15.png" alt="maven的设置"></p>
+<h4 id="setting-xml-设置"><a href="#setting-xml-设置" class="headerlink" title="setting.xml 设置"></a>setting.xml 设置</h4><p>为了更快地访问到maven中引用的库，那么需要修改镜像源。如下提供的是阿里云的镜像源设置方法，将这段代码拷贝到原有的setting.xml文件中即可。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mirrors</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/repositories/central/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p><a href="https://zhuanlan.zhihu.com/p/64201289">什么是maven</a></p>
+<blockquote>
+<p>如果您觉得上面的内容对您有帮助欢迎点赞、评论、转发！<br>更多内容请查阅作者博客：<a href="https://jiaruiblog.com/">https://jiaruiblog.com</a><br>或者<code>star</code>作者github: <a href="https://github.com/Jarrettluo?tab=repositories">https://github.com/Jarrettluo?tab=repositories</a></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
 </search>
